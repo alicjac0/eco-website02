@@ -19,7 +19,9 @@ const Footer = () => {
         </p>
       </div>
 
-      <Image src="/logo.png" alt="LOGO" width={100} height={80} />
+      <a href="https://www.design.com/maker/logos/page1?text=&textChanged=&isFromRootPage=&searchText=tree&keywordChanged=true&colors=&filterByTags=">
+        <Image src="/logo.png" alt="LOGO" width={100} height={80} />
+      </a>
 
       <div className="footer__authors">
         <p className="footer__authors--title">AUTHORS</p>
