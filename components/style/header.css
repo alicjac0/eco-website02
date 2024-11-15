@@ -1,0 +1,91 @@
+header {
+  background-image: url(/public/pictures/background.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: #f6f6ef;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header__navbar--menu {
+  background-color: rgb(170, 170, 170, 0.6);
+  width: 875px;
+  height: 51px;
+  border-radius: 40px;
+  position: fixed;
+  right: 0;
+  margin-right: 20px;
+  z-index: 999;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #1e1e1e;
+}
+
+.menu__option {
+  transition: 0.2s;
+}
+
+.menu__option:hover {
+  color: #f6f6ef;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.header__text {
+  width: 100%;
+}
+
+.header__title {
+  width: 100%;
+  text-align: right;
+  padding: 50px;
+  font-size: 64px;
+}
+
+.header__subtitle {
+  width: 100%;
+  font-size: 48px;
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header__bglink {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__bglink--img {
+  width: 20px;
+  height: 20px;
+}
+
+.header__link {
+  padding-left: 5px;
+  width: auto;
+  color: rgb(246, 246, 239, 0);
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+  transition: 0.2s;
+}
+
+.header__bglink:hover .header__link {
+  color: #f6f6ef;
+  transition: 0.2s;
+  cursor: pointer;
+}

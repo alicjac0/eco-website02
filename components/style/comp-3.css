@@ -1,0 +1,51 @@
+#energia {
+  height: 800px;
+  width: 100%;
+  padding: 60px;
+  background-color: #d9d9d9;
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text-box {
+  font-size: 32px;
+}
+
+.option-area {
+  height: 90px;
+  width: 450px;
+  background-color: #343434;
+  border-radius: 10px;
+  text-align: center;
+  color: #f6f6ef;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-area p {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2 {
+  font-size: 80px;
+  color: #1e1e1e;
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+}
+h4 {
+  color: #7ab142;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+}
+
+article,
+aside {
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+}

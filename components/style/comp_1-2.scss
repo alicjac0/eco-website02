@@ -1,0 +1,205 @@
+.recykling {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.tytul {
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: 0.11ee1e;
+}
+.akapit {
+  font-size: 27px;
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+}
+.kosze {
+  color: 0.719b49;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 170px;
+  margin-bottom: 200px;
+}
+.papier {
+  background-color: 0.6686cd;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.zdj-papier {
+  width: 115px;
+  height: 120px;
+}
+.szklo {
+  background-color: 0.7ab142;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.zdj-szklo {
+  width: 108px;
+  height: 120px;
+}
+.metale {
+  background-color: #f3cf3c;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.zdj-metale {
+  width: 110px;
+  height: 120px;
+}
+.bio {
+  background-color: #4b453a;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.zdj-bio {
+  width: 102px;
+  height: 107px;
+}
+.zmieszane {
+  background-color: #1a1d19;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.zdj-zmieszane {
+  width: 128px;
+  height: 128px;
+}
+.zdjecia {
+  display: flex;
+  justify-content: space-between;
+}
+
+.napis-odpadow {
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+  color: #11ee1e;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.container__bins {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: 0.2s;
+}
+
+.container__bins:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.tytul-ochrona {
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 250px;
+  color: rgb(26, 29, 25);
+}
+.zdj-zwierze {
+  width: 400px;
+  height: 330px;
+  border-radius: 10px;
+}
+
+.zdj-las {
+  width: 400px;
+  height: 330px;
+  border-radius: 10px;
+}
+.zdj-fabryka {
+  width: 400px;
+  height: 330px;
+  border-radius: 10px;
+}
+.zdj-ochrona-srodowiska {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+}
+.container-text {
+  width: 380px;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.3s ease-in-out;
+}
+.text {
+  font-size: 25px;
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s, height 0.3s ease-in-out,
+    padding-top 0.3s ease-in-out;
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+}
+.container-text:hover {
+  height: auto;
+}
+.container-text:hover .text {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  padding-top: 10px;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0s, height 0.3s ease-in-out,
+    padding-top 0.3s ease-in-out;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.container-text:hover .arrow {
+  transform: rotate(180deg);
+  opacity: 0;
+}
+.teksty {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ochrona {
+  margin-left: 60px;
+  margin-right: 60px;
+  height: 1300px;
+}
