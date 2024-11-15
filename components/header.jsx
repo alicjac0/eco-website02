@@ -21,7 +21,7 @@ const Header = () => {
               <a href="#energia">OSZCZĘDZANIE ENERGII</a>
             </li>
             <li className="menu__option">
-              <a href="#quizz">QUIZ</a>
+              <a href="#quiz">QUIZ</a>
             </li>
           </ul>
         </div>
