@@ -1,4 +1,4 @@
-.recykling {
+#recykling {
   margin-left: 60px;
   margin-right: 60px;
 }
@@ -6,21 +6,21 @@
   font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
   font-size: 80px;
   font-weight: bold;
-  color: 0.11ee1e;
+  color: #1e1e1e;
 }
 .akapit {
   font-size: 27px;
   font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
 }
 .kosze {
-  color: 0.719b49;
+  color: #719b49;
   font-size: 40px;
   font-weight: bold;
   padding-top: 170px;
   margin-bottom: 200px;
 }
 .papier {
-  background-color: 0.6686cd;
+  background-color: #6686cd;
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -34,7 +34,7 @@
   height: 120px;
 }
 .szklo {
-  background-color: 0.7ab142;
+  background-color: #7ab142;
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -96,7 +96,7 @@
 
 .napis-odpadow {
   font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
-  color: #11ee1e;
+  color: #1e1e1e;
   font-weight: bold;
   font-size: 24px;
   text-align: center;
@@ -198,7 +198,7 @@
   justify-content: space-between;
 }
 
-.ochrona {
+#ochrona {
   margin-left: 60px;
   margin-right: 60px;
   height: 1300px;
