@@ -1,3 +1,7 @@
+'use client' // Ważne, aby komponent był renderowany po stronie klienta
+
+import { useState, useEffect } from 'react'
+
 const quizData = [
   {
     question: 'Jakie znaczenie ma recykling?',
@@ -106,50 +110,65 @@ const quizData = [
   },
 ]
 
-const quizContainer = document.getElementById('quiz')
-const submitButton = document.getElementById('submit')
-const resultContainer = document.getElementById('result')
+const Quiz = () => {
+  const [score, setScore] = useState(0)
+  const [selectedAnswers, setSelectedAnswers] = useState([])
 
-function loadQuiz() {
-  quizData.forEach((questionData, questionIndex) => {
-    const questionElement = document.createElement('div')
-    questionElement.classList.add('question')
-    questionElement.innerText = `${questionIndex + 1}. ${questionData.question}`
-    quizContainer.appendChild(questionElement)
+  const handleAnswerChange = (questionIndex, answer) => {
+    const updatedAnswers = [...selectedAnswers]
+    updatedAnswers[questionIndex] = answer
+    setSelectedAnswers(updatedAnswers)
+  }
 
-    const answersContainer = document.createElement('div')
-    answersContainer.classList.add('answers')
+  const checkQuiz = () => {
+    let newScore = 0
 
-    questionData.answers.forEach((answer) => {
-      const label = document.createElement('label')
-      const input = document.createElement('input')
-      input.type = 'radio'
-      input.name = `question${questionIndex}`
-      input.value = answer
-      label.appendChild(input)
-      label.appendChild(document.createTextNode(answer))
-      answersContainer.appendChild(label)
+    quizData.forEach((questionData, questionIndex) => {
+      if (selectedAnswers[questionIndex] === questionData.correct) {
+        newScore++
+      }
     })
 
-    quizContainer.appendChild(answersContainer)
-  })
+    setScore(newScore)
+  }
+
+  useEffect(() => {}, [])
+
+  return (
+    <section id="quiz">
+      <p className="quiz__title">QUIZ</p>
+      <p className="quiz__subtitle">SPRAWDŹ SWOJĄ WIEDZĘ!</p>
+      <div className="quiz-container">
+        {quizData.map((questionData, questionIndex) => (
+          <div key={questionIndex} className="question">
+            <p>
+              {questionIndex + 1}. {questionData.question}
+            </p>
+            <div className="answers">
+              {questionData.answers.map((answer, answerIndex) => (
+                <label key={answerIndex}>
+                  <input
+                    type="radio"
+                    name={`question${questionIndex}`}
+                    value={answer}
+                    onChange={() => handleAnswerChange(questionIndex, answer)}
+                    checked={selectedAnswers[questionIndex] === answer}
+                  />
+                  {answer}
+                </label>
+              ))}
+            </div>
+          </div>
+        ))}
+        <button id="submit" onClick={checkQuiz}>
+          Sprawdź Wynik
+        </button>
+        <div id="result">
+          Twój wynik: {score} / {quizData.length}
+        </div>
+      </div>
+    </section>
+  )
 }
 
-function checkQuiz() {
-  let score = 0
-
-  quizData.forEach((questionData, questionIndex) => {
-    const selectedAnswer = document.querySelector(
-      `input[name="question${questionIndex}"]:checked`
-    )
-    if (selectedAnswer && selectedAnswer.value === questionData.correct) {
-      score++
-    }
-  })
-
-  resultContainer.innerText = `Twój wynik: ${score} / ${quizData.length}`
-}
-
-submitButton.addEventListener('click', checkQuiz)
-
-loadQuiz()
+export default Quiz
